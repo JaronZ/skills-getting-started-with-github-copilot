@@ -156,7 +156,7 @@ footer {
 
 /* Use custom list style with compact items */
 .participants-list {
-  list-style: none;
+  list-style: none; /* hide bullet points */
   padding: 0;
   margin: 8px 0 0 0;
   max-height: 120px; /* keep cards reasonably sized */
@@ -194,6 +194,22 @@ footer {
 /* Email text */
 .participant-email {
   word-break: break-all;
+}
+
+/* Delete button next to participant */
+.participant-delete {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.participant-delete:hover {
+  background-color: rgba(198, 40, 40, 0.08);
 }
 
 /* Empty state */
