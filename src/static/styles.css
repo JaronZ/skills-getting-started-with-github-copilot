@@ -142,3 +142,64 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+/* Participants section inside activity cards */
+.participants-section {
+  margin-top: 12px;
+}
+
+.participants-section h5 {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #1a237e;
+}
+
+/* Use custom list style with compact items */
+.participants-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+  max-height: 120px; /* keep cards reasonably sized */
+  overflow: auto;
+}
+
+.participants-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Circular badge with initials */
+.participant-badge {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background-color: #1a237e;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* Email text */
+.participant-email {
+  word-break: break-all;
+}
+
+/* Empty state */
+.participants-empty {
+  margin-top: 6px;
+  color: #666;
+  font-style: italic;
+  font-size: 14px;
+}
