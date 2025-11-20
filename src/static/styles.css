@@ -193,7 +193,7 @@ footer {
 
 /* Email text */
 .participant-email {
-  word-break: break-all;
+  overflow-wrap: break-word;
 }
 
 /* Delete button next to participant */

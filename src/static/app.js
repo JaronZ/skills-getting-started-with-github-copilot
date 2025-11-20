@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function initialsFromEmail(email) {
     const local = String(email).split("@")[0] || "";
     const parts = local.replace(/[^a-z0-9]+/gi, " ").trim().split(/\s+/);
-    if (!parts.length || !parts[0]) return (local[0] || "").toUpperCase();
+    if (!parts.length || !parts[0]) return (local.charAt(0) || "?").toUpperCase();
     const first = parts[0].charAt(0) || "";
     const second = parts[1] ? parts[1].charAt(0) : "";
     return (first + second).toUpperCase();
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
             participantsHtml += `<li>
                 <span class="participant-badge">${badge}</span>
                 <span class="participant-email">${safeEmail}</span>
-                <button class="participant-delete" data-activity="${escapeHtml(name)}" data-email="${safeEmail}" title="Remove participant">✖</button>
+                <button class="participant-delete" data-activity="${escapeHtml(name)}" data-email="${safeEmail}" title="Remove participant" aria-label="Remove ${safeEmail} from ${escapeHtml(name)}">✖</button>
               </li>`;
           });
           participantsHtml += `</ul>`;
